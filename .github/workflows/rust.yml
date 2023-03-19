@@ -1,0 +1,20 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  upgrade-dep:
+    runs-on: ubuntu-latest
+    environment: upgrade action
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: init hermit
+        run: ./bin/hermit env --raw >> $GITHUB_ENV
+      
+      - name: build
+        run: ./bin/cargo build
