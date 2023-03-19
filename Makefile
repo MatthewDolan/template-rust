@@ -1,5 +1,11 @@
 include rust.mk hermit.mk
 
+.PHONY: fmt
+fmt: fmt-rust
+
+.PHONY: lint
+lint: lint-rust
+
 .PHONY: build
 build: build-rust
 

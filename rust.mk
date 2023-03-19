@@ -1,3 +1,11 @@
+.PHONY: fmt-rust
+fmt-rust:
+	@bin/cargo clippy --fix --allow-staged --allow-dirty
+
+.PHONY: lint-rust
+lint-rust:
+	@bin/cargo clippy
+
 .PHONY: build-rust
 build-rust:
 	@bin/cargo build
