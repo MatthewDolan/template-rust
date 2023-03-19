@@ -6,6 +6,10 @@ fmt-rust:
 lint-rust:
 	@bin/cargo clippy
 
+.PHONY: test-rust
+test-rust:
+	@bin/cargo test
+
 .PHONY: build-rust
 build-rust:
 	@bin/cargo build

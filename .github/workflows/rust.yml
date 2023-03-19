@@ -18,7 +18,7 @@ jobs:
       - name: lint
         run: ./bin/cargo clippy
 
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,5 +26,5 @@ jobs:
       - name: init hermit
         run: ./bin/hermit env --raw >> $GITHUB_ENV
       
-      - name: build
-        run: ./bin/cargo build
+      - name: test
+        run: ./bin/cargo test

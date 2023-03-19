@@ -6,6 +6,9 @@ fmt: fmt-rust
 .PHONY: lint
 lint: lint-rust
 
+.PHONY: test
+test: test-rust
+
 .PHONY: build
 build: build-rust
 
