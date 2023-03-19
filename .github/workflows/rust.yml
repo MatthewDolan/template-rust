@@ -7,6 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: init hermit
+        run: ./bin/hermit env --raw >> $GITHUB_ENV
+      
+      - name: build
+        run: ./bin/cargo clippy
+
   build:
     runs-on: ubuntu-latest
     steps:
