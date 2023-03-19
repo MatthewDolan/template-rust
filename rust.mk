@@ -21,3 +21,7 @@ run-rust:
 .PHONY: release-rust
 release-rust:
 	@bin/cargo build --release
+
+.PHONY: upgrade-rust
+upgrade-rust:
+	@bin/cargo update
