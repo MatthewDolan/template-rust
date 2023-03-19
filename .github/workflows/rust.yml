@@ -7,9 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  upgrade-dep:
+  build:
     runs-on: ubuntu-latest
-    environment: upgrade action
     steps:
       - uses: actions/checkout@v3
 
