@@ -15,7 +15,7 @@ jobs:
       - name: init hermit
         run: ./bin/hermit env --raw >> $GITHUB_ENV
       
-      - name: build
+      - name: lint
         run: ./bin/cargo clippy
 
   build:
