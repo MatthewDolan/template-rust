@@ -14,8 +14,11 @@ jobs:
 
       - name: init hermit
         run: ./bin/hermit env --raw >> $GITHUB_ENV
-      
-      - name: lint
+
+      - name: rustfmt
+        run: ./bin/cargo fmt --all -- --check
+
+      - name: clippy
         run: ./bin/cargo clippy
 
   test:
