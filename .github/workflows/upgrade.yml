@@ -17,7 +17,10 @@ jobs:
         run: ./bin/hermit env --raw >> $GITHUB_ENV
 
       - name: upgrade hermit dependencies
-        run: hermit upgrade
+        run: bin/hermit upgrade
+
+      - name: upgrade rust dependencies
+        run: bin/cargo update
 
       - name: create pull request
         id: create-pull-request

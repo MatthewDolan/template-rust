@@ -19,4 +19,4 @@ run: run-rust
 release: release-rust
 
 .PHONY: upgrade
-upgrade: upgrade-hermit
+upgrade: upgrade-hermit upgrade-rust
